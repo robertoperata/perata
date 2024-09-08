@@ -2,11 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>My New Hugo Site</title>
-    <link>https://robertoperata.github.io/perata/</link>
+    <link>http://localhost:53675/perata/</link>
     <description>Recent content on My New Hugo Site</description>
-    <generator>Hugo -- 0.134.1</generator>
+    <generator>Hugo -- 0.133.1</generator>
     <language>en-us</language>
-    <lastBuildDate></lastBuildDate>
-    <atom:link href="https://robertoperata.github.io/perata/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Sep 2024 08:14:17 +0200</lastBuildDate>
+    <atom:link href="http://localhost:53675/perata/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Third</title>
+      <link>http://localhost:53675/perata/posts/third/</link>
+      <pubDate>Sun, 08 Sep 2024 08:14:17 +0200</pubDate>
+      <guid>http://localhost:53675/perata/posts/third/</guid>
+      <description>that&amp;rsquo;s another</description>
+    </item>
+    <item>
+      <title>First</title>
+      <link>http://localhost:53675/perata/posts/first/</link>
+      <pubDate>Sun, 08 Sep 2024 07:53:11 +0200</pubDate>
+      <guid>http://localhost:53675/perata/posts/first/</guid>
+      <description>Other </description>
+    </item>
+    <item>
+      <title>Test</title>
+      <link>http://localhost:53675/perata/posts/test/</link>
+      <pubDate>Sun, 08 Sep 2024 07:37:27 +0200</pubDate>
+      <guid>http://localhost:53675/perata/posts/test/</guid>
+      <description>This is a test </description>
+    </item>
   </channel>
 </rss>
