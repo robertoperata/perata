@@ -2,23 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/perata/</loc>
+    <loc>https://perata.net/</loc>
     <lastmod>2024-09-08T08:14:17+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/perata/posts/</loc>
+    <loc>https://perata.net/posts/</loc>
     <lastmod>2024-09-08T08:14:17+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/perata/posts/third/</loc>
+    <loc>https://perata.net/posts/third/</loc>
     <lastmod>2024-09-08T08:14:17+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/perata/posts/first/</loc>
+    <loc>https://perata.net/posts/first/</loc>
     <lastmod>2024-09-08T07:53:11+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/perata/posts/test/</loc>
+    <loc>https://perata.net/posts/test/</loc>
     <lastmod>2024-09-08T07:37:27+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/perata/categories/</loc>
+    <loc>https://perata.net/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/perata/tags/</loc>
+    <loc>https://perata.net/tags/</loc>
   </url>
 </urlset>
