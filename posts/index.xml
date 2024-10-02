@@ -4,30 +4,9 @@
     <title>Posts on </title>
     <link>https://perata.net/posts/</link>
     <description>Recent content in Posts on </description>
-    <generator>Hugo -- 0.133.1</generator>
+    <generator>Hugo -- 0.134.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Sep 2024 08:14:17 +0200</lastBuildDate>
+    <lastBuildDate></lastBuildDate>
     <atom:link href="https://perata.net/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Third</title>
-      <link>https://perata.net/posts/third/</link>
-      <pubDate>Sun, 08 Sep 2024 08:14:17 +0200</pubDate>
-      <guid>https://perata.net/posts/third/</guid>
-      <description>that&amp;rsquo;s another</description>
-    </item>
-    <item>
-      <title>First</title>
-      <link>https://perata.net/posts/first/</link>
-      <pubDate>Sun, 08 Sep 2024 07:53:11 +0200</pubDate>
-      <guid>https://perata.net/posts/first/</guid>
-      <description>Other </description>
-    </item>
-    <item>
-      <title>Test</title>
-      <link>https://perata.net/posts/test/</link>
-      <pubDate>Sun, 08 Sep 2024 07:37:27 +0200</pubDate>
-      <guid>https://perata.net/posts/test/</guid>
-      <description>This is a test </description>
-    </item>
   </channel>
 </rss>
