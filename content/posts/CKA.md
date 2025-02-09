@@ -6,3 +6,6 @@ draft = true
 # CKA - Certified Kubernetes Adamin
 
 There's the notes I'm taking to get CKA.
+
+The exam will dive in different topics:
+- Cluster Architecture, Installation, and Configuration
