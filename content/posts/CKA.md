@@ -1,7 +1,7 @@
 +++
 title = 'CKA'
 date = 2025-02-09T08:38:54+01:00
-draft = true
+draft = false
 +++
 # CKA - Certified Kubernetes Adamin
 

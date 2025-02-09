@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on </title>
     <link>https://perata.net/posts/</link>
     <description>Recent content in Posts on </description>
-    <generator>Hugo -- 0.133.1</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate></lastBuildDate>
+    <lastBuildDate>Sun, 09 Feb 2025 08:38:54 +0100</lastBuildDate>
     <atom:link href="https://perata.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CKA</title>
+      <link>https://perata.net/posts/cka/</link>
+      <pubDate>Sun, 09 Feb 2025 08:38:54 +0100</pubDate>
+      <guid>https://perata.net/posts/cka/</guid>
+      <description>CKA - Certified Kubernetes Adamin There&amp;rsquo;s the notes I&amp;rsquo;m taking to get CKA.&#xA;The exam will dive in different topics:&#xA;Cluster Architecture, Installation, and Configuration </description>
+    </item>
   </channel>
 </rss>

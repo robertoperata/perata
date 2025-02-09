@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Vim Essentials | </title>
+<meta name="keywords" content="">
+<meta name="description" content="Vim Essentials Vim Deleting x to delete char over cursor X delete backwords previous char D or D$ delete from cursor to end of line dw delete from the cursor to the end of the word dW delete from the cursor to the end of the word including puntuaction and space db or dB delete backwords to the beginning of the word 2dw delete two words 2dW delete two words with puntuaction daw delete to the word from the beginning even if you are not over the first char DD delete whole line 3DD delete 3 lines">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/vim-essentials/">
+
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fc220c15db4aef0318bbf30adc45d33d4d7c88deff3238b23eb255afdc472ca6.css" integrity="sha256-/CIMFdtK7wMYu/MK3EXTPU18iN7/MjiyPrJVr9xHLKY=" rel="preload stylesheet" as="style">
+
+<link crossorigin="anonymous" href="css/override.css" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/vim-essentials/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <svg width='110' height='126' viewBox='0 0 441 252' stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M278 247L286.5 246.5L290 252H278V247Z" />
+                <path d="M98 209.636L105.5 209L113.5 216.5H99.5L98 209.636Z"/>
+                <path d="M342.5 209.636L335 209L327 216.5H341L342.5 209.636Z" />
+                <path d="M342.5 34.8636L335 35.5L327 28H341L342.5 34.8636Z"/>
+                <path d="M98 34.8636L105.5 35.5L113.5 28H99.5L98 34.8636Z"/>
+                <path d="M174 167.887C174 167.887 267 178.887 267 85.3875C267 -8.11213 174 5.72124 174 5.72124V87.2215M174 167.887V231.888M174 167.887V249.387M246 187L282.5 249.387M102.5 31.5551L8 116.555C27.8333 138.5 88.5 200.588 102.5 212.721M338.5 31.5551L385.75 74.0551L433 116.555C413.167 138.5 352.5 200.588 338.5 212.721" stroke-width="10"/>
+            </svg>
+            <div class="logo-switches">
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+        <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+            <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                 stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                 stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+        </button>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Vim Essentials
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
+          <path
+            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
+    </h1>
+    <div class="post-meta"><span title='2024-10-02 21:22:48 +0200 CEST'>October 2, 2024</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="vim-essentials">Vim Essentials<a hidden class="anchor" aria-hidden="true" href="#vim-essentials">#</a></h1>
+<h2 id="vim-deleting">Vim Deleting<a hidden class="anchor" aria-hidden="true" href="#vim-deleting">#</a></h2>
+<p><code>x</code> to delete char over cursor
+<code>X</code> delete backwords previous char
+<code>D</code> or <code>D$</code> delete from cursor to end of line
+<code>dw</code> delete from the cursor to the end of the word
+<code>dW</code> delete from the cursor to the end of the word including puntuaction and space
+<code>db</code> or <code>dB</code> delete backwords to the beginning of the word
+<code>2dw</code> delete two words
+<code>2dW</code> delete two words with puntuaction
+<code>daw</code> delete to the word from the beginning even if you are not over the first char
+<code>DD</code> delete whole line
+<code>3DD</code> delete 3 lines</p>
+<h2 id="getting-help">Getting Help<a hidden class="anchor" aria-hidden="true" href="#getting-help">#</a></h2>
+<p><code>:help</code> to get help
+<code>:help command</code> to get help for a specific commnad
+<code>:help subject</code> to get help for a subject (ex <code>:help linewise</code>)
+<code>ctrl + i</code> page forward, <code>ctrl + o</code> page backward
+if in the documentatin type <code>cmd + [</code> search help for the word over the cursor
+<code>ctrl + w w</code> toggle between help window and document window</p>
+<h2 id="cut-copy--paste">Cut, Copy &amp; Paste<a hidden class="anchor" aria-hidden="true" href="#cut-copy--paste">#</a></h2>
+<p><code>d</code> and <code>x</code> cut text not just delete it
+cut = delete and save into a register (cliboard storage)
+<code>p</code> paste (put) text from register
+<code>P</code> paste (put) text above the cursor (lines) or previous char
+<code>xp</code> to swap char
+<code>y</code> yank (copy)
+<code>yw</code> copy entire word
+<code>Y</code> copy from cursor to end of line
+<code>yy</code> yank entire line
+<code>yyp</code> duplicate line
+<code>4yy</code> yank 4 lines
+<code>u</code> undo last command
+<code>ctrl r</code> redo</p>
+<h3 id="registers">Registers<a hidden class="anchor" aria-hidden="true" href="#registers">#</a></h3>
+<p>There are 3 different types of register:</p>
+<ul>
+<li>unnamed</li>
+<li>numbered</li>
+<li>named</li>
+</ul>
+<p>Registers are precedes from double quotes:</p>
+<ul>
+<li>unnamed register = &quot;&quot;</li>
+<li>numbered registers = &ldquo;0 &ldquo;1 &hellip;  &ldquo;9</li>
+</ul>
+<p>The unnamed register &quot;&rdquo; holds text from <code>d</code>,<code>c</code>,<code>s</code>,<code>x</code> and <code>y</code> operations
+<code>&quot;0</code> holds last text yanked <code>y</code>
+<code>&quot;1</code> holds last text deleted <code>d</code> or changed <code>c</code></p>
+<p>numbered registers shift with each <code>d</code> or <code>c</code></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/"></a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
